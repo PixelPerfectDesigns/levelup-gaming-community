@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - LevelUp Gaming</title>
+    
+    <!-- Internal CSS - Required for grading purposes -->
+    <style>
+        /* Internal CSS for hover effects and animations */
+        .games-page .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .games-page .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .games-page .game-card__image img {
+            transition: transform 0.5s ease;
+        }
+        
+        .games-page .game-card:hover .game-card__image img {
+            transform: scale(1.08);
+        }
+        
+        /* Custom heading style with gradient underline */
+        .games-page .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .games-page .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS: External CSS imports -->
+    <link rel="stylesheet" href="style-modular.css">
+    <link rel="stylesheet" href="css/games.css">
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="games-page">
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming">
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="games.html" class="nav__link nav__link--active">Games</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Community</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="register.html" class="nav__link nav__link--cta">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero--games">
+            <div class="hero__container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title" style="letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Our Games</h1>
+                    <p class="hero__description" style="max-width: 600px; font-weight: 300;">Discover the latest and greatest in gaming entertainment</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Games Section -->
+        <section class="featured-games">
+            <div class="container">
+                <h2 class="section-title">Featured Games</h2>
+                <div class="games-grid">
+                    <!-- Game Card -->
+                    <div class="game-card">
+                        <div class="game-card__image">
+                            <img src="assets/img/Glitchstorm_card.png" alt="Glitchstorm">
+                        </div>
+                        <div class="game-card__content">
+                            <h3>Glitchstorm Showdown</h3>
+                            <p class="game-card__genre">Battle Royale • Action</p>
+                            <p>Fast-paced battle royale with unique glitch mechanics that keep every match unpredictable.</p>
+                            <div class="game-card__stats">
+                                <span class="stat">
+                                    <strong>1,250</strong> Active Players
+                                </span>                                <span class="stat">
+                                    <strong>15</strong> Tournaments
+                                </span>
+                            </div>
+                            <a href="secretpageunlocked.html" class="btn btn--primary">Join Tournament</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" >
+                        <div class="game-card__image">
+                            <img src="assets/img/Mechcore_Siege_card.png" alt="Mechcore Siege">
+                        </div>
+                        <div class="game-card__content">
+                            <h3>Mechcore Siege</h3>
+                            <p class="game-card__genre">Strategy • Multiplayer</p>
+                            <p>Command giant mechs in strategic battles that require both tactical thinking and quick reflexes.</p>
+                            <div class="game-card__stats">
+                                <span class="stat">
+                                    <strong>850</strong> Active Players
+                                </span>                                <span class="stat">
+                                    <strong>8</strong> Tournaments
+                                </span>
+                            </div>
+                            <a href="secretpageunlocked.html" class="btn btn--primary">Join Tournament</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card" >
+                        <div class="game-card__image">
+                            <img src="assets/img/Pulse_Protocol_card.png" alt="Pulse Protocol">
+                        </div>
+                        <div class="game-card__content">
+                            <h3>Pulse Protocol</h3>
+                            <p class="game-card__genre">Cyberpunk • RPG</p>
+                            <p>Immersive cyberpunk RPG with deep character customization and branching storylines.</p>
+                            <div class="game-card__stats">
+                                <span class="stat">
+                                    <strong>650</strong> Active Players
+                                </span>
+                                <span class="stat">
+                                    <strong>5</strong> Tournaments                                </span>
+                            </div>
+                            <a href="secretpageunlocked.html" class="btn btn--primary">Join Tournament</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Categories -->
+        <section class="game-categories">
+            <div class="container">
+                <h2 class="section-title">Game Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" style="border-top: 3px solid #ff6b35;">
+                        <div class="category-card__icon" style="color: #ff6b35;">🎮</div>
+                        <h3>Battle Royale</h3>
+                        <p>Fast-paced survival games where only the strongest survive.</p>
+                        <span class="category-card__count">12 Games</span>
+                    </div>
+                    <div class="category-card" style="border-top: 3px solid #4287f5;">
+                        <div class="category-card__icon" style="color: #4287f5;">🎯</div>
+                        <h3>FPS</h3>
+                        <p>First-person shooters that test your aim and reflexes.</p>
+                        <span class="category-card__count">8 Games</span>
+                    </div>
+                    <div class="category-card" style="border-top: 3px solid #42b883;">
+                        <div class="category-card__icon" style="color: #42b883;">⚔️</div>
+                        <h3>Strategy</h3>
+                        <p>Games that challenge your tactical thinking and planning.</p>
+                        <span class="category-card__count">6 Games</span>
+                    </div>
+                    <div class="category-card" style="border-top: 3px solid #fc5c65;">
+                        <div class="category-card__icon" style="color: #fc5c65;">🏎️</div>
+                        <h3>Racing</h3>
+                        <p>High-speed racing games for adrenaline junkies.</p>
+                        <span class="category-card__count">4 Games</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Platforms Section -->
+        <section class="section platforms">
+            <div class="container">
+                <h2 class="section-title">Supported Platforms</h2>
+                <div class="platforms-grid">
+                    <div class="platform-card" style="border-radius: 12px;">
+                        <div class="platform-card__image">
+                            <img src="assets/img/PC_Game_row.jpg" alt="PC Gaming">
+                        </div>
+                        <h3>PC Gaming</h3>
+                        <p>The ultimate gaming experience with maximum customization and performance.</p>
+                    </div>
+                    <div class="platform-card" style="border-radius: 12px;">
+                        <div class="platform-card__image">
+                            <img src="assets/img/modern_console_controller.jpg" alt="Console Gaming">
+                        </div>
+                        <h3>Console Gaming</h3>
+                        <p>PlayStation, Xbox, and Nintendo Switch tournaments and communities.</p>
+                    </div>
+                    <div class="platform-card" style="border-radius: 12px;">
+                        <div class="platform-card__image">
+                            <img src="assets/img/VR_Headset.jpg" alt="VR Gaming">
+                        </div>
+                        <h3>VR Gaming</h3>
+                        <p>Immersive virtual reality experiences that transport you to new worlds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section cta">
+            <div class="container">
+                <div class="cta__content" data-aos="fade-up">
+                    <h2 class="section-title">Ready to Level Up?</h2>
+                    <p>Join our gaming community and start competing in your favorite games today!</p>
+                    <a href="register.html" class="btn btn--primary btn--large" style="font-weight: bold; padding: 15px 35px; font-size: 1.1rem;">Join LevelUp Gaming</a>
+                </div>
+            </div>
+        </section>
+    </main>    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <!-- Column 1: Quick Links -->
+                <div class="footer__quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="register.html">Join Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Logo and Branding -->
+                <div class="footer__branding">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming" class="footer__logo">
+                    <p class="footer__tagline">Your Arena Awaits</p>
+                    <p class="footer__copyright">&copy; 2025 LevelUp Gaming. All rights reserved.</p>
+                </div>
+                
+                <!-- Column 3: Social Media -->
+                <div class="footer__social-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer__social">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-facebook"></i></span>
+                            Facebook
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-twitch"></i></span>
+                            Twitch
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-discord"></i></span>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 4: Address -->
+                <div class="footer__address">
+                    <h3>Visit Us</h3>                    <div class="footer__address-content">
+                        <p><strong>LevelUp Gaming Arena</strong></p>                        <p>123 Pixel Street</p>
+                        <p>Suite 200</p>
+                        <p>Portland, OR 97201</p>
+                        <p>United States</p>
+                        <br>                        <table class="footer__hours-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><strong>Business Hours</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday - Friday</td>
+                                    <td>9 AM - 6 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p><strong>Phone:</strong> (555) 123-GAME</p>
+                        <p><strong>Email:</strong> info@levelupgaming.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>Building the ultimate gaming community where players of all levels can connect, compete, and grow together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Initialize libraries -->
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        }
+    </script>
+</body>
+</html>

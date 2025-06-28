@@ -1,0 +1,549 @@
+/* css/community.css - Community page specific styles */
+
+/* 
+ * COMMUNITY CSS ORGANIZATION
+ * 1. Hero Styles
+ * 2. Section & Typography Styles
+ * 3. Community Stats Styles
+ * 4. Featured Members Styles
+ * 5. Community Features Styles
+ * 6. Community Engagement Styles
+ * 7. Team Showcase Styles
+ * 8. Join Community CTA Styles
+ * 9. Responsive Styles
+ */
+
+/* ==========================================================================
+   1. HERO STYLES
+   ========================================================================== */
+.hero--community {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: relative;
+}
+
+.hero--community::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/img/community_hero.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero--community .hero__title {
+    letter-spacing: 1px;
+}
+
+.hero--community .hero__description {
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   2. SECTION & TYPOGRAPHY STYLES
+   ========================================================================== */
+/* Section title styling */
+.section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Section subtitle styling */
+.section .section-subtitle {
+    text-align: center;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   3. COMMUNITY STATS STYLES
+   ========================================================================== */
+.community-stats {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card__number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card__label {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   4. FEATURED MEMBERS STYLES
+   ========================================================================== */
+.featured-members {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* Member card styles */
+.member-card {
+    text-align: center;
+}
+
+.member-card__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2rem auto 1.5rem;
+    border: 4px solid var(--primary-color);
+}
+
+.member-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-card__title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-card__stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.member-card__stats .stat {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.member-card__stats .stat strong {
+    color: var(--primary-color);
+}
+
+.member-card__games {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.game-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. COMMUNITY FEATURES STYLES
+   ========================================================================== */
+.community-features {
+    background: #f8f9fa;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* Feature card styling */
+.feature-card__image {
+    height: 150px;
+    overflow: hidden;
+    margin: 0 -2rem 1rem -2rem;
+}
+
+.feature-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card .card__content {
+    text-align: center;
+}
+
+.feature-card .btn {
+    margin-top: 1rem;
+}
+
+/* Community Guidelines */
+.community-guidelines {
+    padding: 6rem 0;
+}
+
+.guidelines-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.guidelines-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.guideline-item {
+    margin-bottom: 2rem;
+}
+
+.guideline-item h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.guideline-item p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+.guidelines-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* ==========================================================================
+   8. JOIN COMMUNITY CTA STYLES
+   ========================================================================== */
+.join-community {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-color);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* CTA content styling */
+.join-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.join-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    opacity: 0.9;
+}
+
+/* Button container styling */
+.join-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   6. COMMUNITY ENGAGEMENT STYLES
+   ========================================================================== */
+.community-engagement {
+    padding: 6rem 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Engagement card styling */
+.engagement-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.engagement-card .card__content {
+    text-align: center;
+}
+
+.engagement-card .btn {
+    margin-top: 1rem;
+}
+
+.engagement-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Stats display within engagement cards */
+.engagement-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stream-preview {
+    position: relative;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.stream-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.stream-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-indicator {
+    background: #ff0000;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.viewer-count {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.events-list {
+    margin: 1.5rem 0;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.event-name {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   7. TEAM SHOWCASE STYLES
+   ========================================================================== */
+.team-showcase {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+}
+
+/* Team information styling */
+.team-info {
+    text-align: left;
+}
+
+.team-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* Team statistics highlights */
+.team-highlights {
+    display: flex;
+    gap: 2rem;
+}
+
+.highlight {
+    text-align: center;
+}
+
+.highlight-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-visual {
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.stream-overlay-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stream-status {
+    font-weight: 600;
+    color: #ff0000;
+}
+
+.current-game {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.member-card__achievement {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Community page footer table should be left-aligned */
+.community-page .footer__hours-table {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Community stats mobile layout */
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    /* Member card mobile adjustments */
+    .member-card__stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* CTA section mobile adjustments */
+    .join-content h2 {
+        font-size: 2rem;
+    }
+    
+    .join-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Engagement cards mobile layout */
+    .engagement-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Team showcase mobile layout */
+    .team-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .team-highlights {
+        justify-content: space-around;
+    }
+    
+    /* Stream overlay mobile adjustments */
+    .stream-overlay-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,457 @@
+/* css/contact.css - Contact page specific styles */
+
+/* 
+ * CONTACT CSS ORGANIZATION
+ * 1. Hero Styles
+ * 2. Contact Form & Info Styles
+ * 3. FAQ Section Styles
+ * 4. Quick Actions Styles
+ * 5. Utility Classes
+ * 6. Responsive Styles
+ */
+
+/* =========================================================================
+   1. HERO STYLES
+   ========================================================================== */
+
+.hero--contact {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: relative;
+}
+
+.hero--contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/img/contact_hero.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero--contact .hero__title {
+    margin-bottom: 0.5rem;
+}
+
+.hero--contact .hero__description {
+    font-weight: 300;
+}
+
+/* Contact page container fix */
+.contact-page .container {
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* =========================================================================
+   2. CONTACT FORM & INFO STYLES
+   ========================================================================== */
+
+/* ==========================================================================
+   2. CONTACT FORM & INFO STYLES
+   ========================================================================== */
+
+.contact-form-section {
+    padding: 6rem 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    width: 100%;
+}
+
+.contact-content h2 {
+    border-bottom: 2px solid #29acd0;
+    padding-bottom: 8px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.contact-item__icon {
+    color: #ff6b35;
+}
+
+.btn--large {
+    min-width: 150px;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.contact-item__icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+.contact-item__content h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item__content p {
+    color: var(--gray-color);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem 2rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    height: fit-content;
+    margin-top: 72px;
+    width: 100%;
+}
+
+.contact-form h2 {
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 0.75rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin: 0;
+}
+
+.checkmark {
+    position: relative;
+}
+
+/* =========================================================================
+   3. FAQ SECTION STYLES
+   ========================================================================== */
+.faq-section {
+    background: #f8f9fa;
+    padding: 6rem 0;
+}
+
+.faq-section h2, 
+.actions-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.faq-item p {
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* =========================================================================
+   4. QUICK ACTIONS STYLES
+   ========================================================================== */
+.quick-actions {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.quick-actions h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.actions-section {
+    background-color: var(--section-bg-solid-light);
+    padding: 4rem 0;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.action-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.action-card__icon {
+    font-size: 3rem;
+    padding: 2rem 2rem 1rem;
+    margin-bottom: 1.5rem;
+    color: #ff6b35;
+}
+
+.action-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.action-card p {
+    color: var(--gray-color);
+    line-height: 1.6;
+    padding: 0 2rem 1.5rem;
+}
+
+.action-card .btn {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+/* =========================================================================
+   5. UTILITY CLASSES
+   ========================================================================== */
+
+/* General Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* =========================================================================
+   6. RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .contact-content {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-form {
+        margin-top: 0;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info h2,
+    .contact-form h2 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-item {
+        padding: 1.5rem;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-section,
+    .faq-section,
+    .actions-section {
+        padding: 3rem 0;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero--contact .hero__title {
+        font-size: 2.25rem;
+    }
+    
+    .contact-form {
+        padding: 1.25rem;
+    }
+    
+    .form-textarea {
+        min-height: 100px;
+    }
+    
+    .action-card {
+        padding: 1.5rem;
+    }
+    
+    .action-card__icon {
+        font-size: 2rem;
+        padding: 1rem 1rem 0.5rem;
+    }
+}

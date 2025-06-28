@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelUp Gaming - Home</title>
+    
+    <!-- Internal CSS (minimal, for grading requirements) -->
+    <style>
+        /* Small inline CSS example for grading requirements */
+        .home-page .testimonial-quote {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .home-page .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -5px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style-modular.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Optional: Swiper Slider Library (via CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body class="home-page">
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming">
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link nav__link--active">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="games.html" class="nav__link">Games</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Community</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="register.html" class="nav__link nav__link--cta">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>    <main>        <!-- Hero Section -->
+        <section class="hero hero--home">
+            <div class="hero__container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title">Welcome to LevelUp Gaming</h1>
+                    <p class="hero__description">Your ultimate destination for gaming experiences, tournaments, and community.</p>
+                    <div class="hero__cta">
+                        <a href="games.html" class="btn btn--primary">Explore Games</a>
+                        <a href="register.html" class="btn btn--secondary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="section section-bg-solid-light">
+            <div class="container">
+                <div class="cards-grid info-grid">
+                    <div class="card info-card">
+                        <div class="card__content">
+                            <h2>Compete</h2>
+                            <p>Join local and online tournaments to test your skills against top-tier players and win exclusive prizes.</p>
+                            <a href="events.html" class="btn btn--secondary">View Events</a>
+                        </div>
+                    </div>
+                    <div class="card info-card">
+                        <div class="card__content">
+                            <h2>Connect</h2>
+                            <p>Become part of the LevelUp community. Meet other players, form teams, and make your mark on the leaderboards.</p>
+                            <a href="community.html" class="btn btn--secondary">Join Community</a>
+                        </div>
+                    </div>
+                    <div class="card info-card">
+                        <div class="card__content">
+                            <h2>Discover</h2>
+                            <p>Learn what drives LevelUp Gaming — our mission, our team, and how we're building a competitive community like no other.</p>
+                            <a href="about.html" class="btn btn--secondary">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Games Section -->
+        <section class="section section-bg-gradient-main">
+            <div class="container">
+                <h2 class="section-title">Featured Games</h2>                <div class="cards-grid game-grid">
+                    <div class="card game-card">
+                        <div class="game-card__image">
+                            <img src="assets/img/Pulse_Protocol_card.png" alt="Pulse Protocol">
+                        </div>
+                        <div class="card__content">
+                            <h3>Pulse Protocol</h3>
+                            <p>A high-speed team shooter where timing and reflexes rule the arena.</p>
+                            <a href="games.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card game-card">                        <div class="game-card__image">
+                            <img src="assets/img/Mechcore_Siege_card.png" alt="Mechcore Siege">
+                        </div>
+                        <div class="card__content">
+                            <h3>Mechcore Siege</h3>
+                            <p>Control customizable mechs in massive urban battles. Strategy meets mayhem.</p>
+                            <a href="games.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card game-card">                        <div class="game-card__image">
+                            <img src="assets/img/Glitchstorm_card.png" alt="GlitchStorm">
+                        </div>
+                        <div class="card__content">
+                            <h3>GlitchStorm</h3>
+                            <p>Hack, dodge, and conquer in a neon-lit cyber arena where code is your weapon.</p>
+                            <a href="games.html" class="btn btn--primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        <!-- Call to Action Section -->
+        <section class="section section-bg-solid-light cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">Ready to Level Up?</h2>
+                    <p>Join hundreds of players already competing, connecting, and rising through the ranks — online and in-store.</p>
+                    <div class="cta-buttons">
+                        <a href="events.html" class="btn btn--primary">View Events</a>
+                        <a href="community.html" class="btn btn--secondary">View Community</a>
+                    </div>
+                </div>
+            </div>
+        </section>        <!-- Testimonials Section -->
+        <section class="section section-bg-gradient-dark testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Players Are Saying</h2>
+                <div class="cards-grid testimonials-grid">
+                    <div class="card testimonial-card">
+                        <div class="card__content">
+                            <p class="testimonial-quote">"LevelUp feels like my second home. The energy, the competition, the people — it's unmatched."</p>
+                            <p class="testimonial-author">— @PixelBandit</p>
+                        </div>
+                    </div>
+                    <div class="card testimonial-card">
+                        <div class="card__content">
+                            <p class="testimonial-quote">"I've been to a lot of gaming spots, but this one raises the bar. Clean setups, smooth tournaments, and sick vibes."</p>
+                            <p class="testimonial-author">— @GameQueen88</p>
+                        </div>
+                    </div>
+                    <div class="card testimonial-card">
+                        <div class="card__content">
+                            <p class="testimonial-quote">"Joined a tournament on a whim… ended up making friends I still game with today. 10/10."</p>
+                            <p class="testimonial-author">— @StackedSniper</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    </main>    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <!-- Column 1: Quick Links -->
+                <div class="footer__quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="register.html">Join Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Logo and Branding -->
+                <div class="footer__branding">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming" class="footer__logo">
+                    <p class="footer__tagline">Your Arena Awaits</p>
+                    <p class="footer__copyright">&copy; 2025 LevelUp Gaming. All rights reserved.</p>
+                </div>
+                
+                <!-- Column 3: Social Media -->
+                <div class="footer__social-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer__social">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-facebook"></i></span>
+                            Facebook
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-twitch"></i></span>
+                            Twitch
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-discord"></i></span>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 4: Address -->
+                <div class="footer__address">
+                    <h3>Visit Us</h3>                    <div class="footer__address-content">
+                        <p><strong>LevelUp Gaming Arena</strong></p>                        <p>123 Pixel Street</p>
+                        <p>Suite 200</p>
+                        <p>Portland, OR 97201</p>
+                        <p>United States</p>
+                        <br>                        <table class="footer__hours-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><strong>Business Hours</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday - Friday</td>
+                                    <td>9 AM - 6 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p><strong>Phone:</strong> (555) 123-GAME</p>
+                        <p><strong>Email:</strong> info@levelupgaming.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>Building the ultimate gaming community where players of all levels can connect, compete, and grow together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Optional: Swiper Slider Library (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize libraries if using them -->
+    <script>
+        // Initialize AOS animations (optional)
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        }
+        
+        // Initialize Swiper if you have slider elements (optional)
+        // Example: const swiper = new Swiper('.swiper', { ... });
+    </script>
+</body>
+</html>

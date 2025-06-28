@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join LevelUp Gaming - Register</title>
+    
+    <!-- Internal CSS - Required for grading purposes -->
+    <style>
+        /* Form styling with gradient border effect */
+        .register-page .register-form {
+            position: relative;
+            background: linear-gradient(145deg, #ffffff, #f5f5f5);
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Decorative gradient border using pseudo-element */
+        .register-page .register-form::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            z-index: -1;
+            border-radius: 12px;
+            opacity: 0.7;
+        }
+        
+        /* Floating label input group container */
+        .register-page .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        /* Input field with bottom border styling */
+        .register-page .input-group input,
+        .register-page .input-group select {
+            border: none;
+            border-bottom: 2px solid #ddd;
+            padding: 10px 5px;
+            font-size: 16px;
+            width: 100%;
+            background: transparent;
+            transition: border-color 0.3s;
+        }
+        
+        /* Input focus state with accent color */
+        .register-page .input-group input:focus,
+        .register-page .input-group select:focus {
+            outline: none;
+            border-bottom-color: var(--primary-color);
+        }
+        
+        /* Floating label positioning */
+        .register-page .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        /* Animated label movement on focus/filled state */
+        .register-page .input-group input:focus ~ label,
+        .register-page .input-group input:valid ~ label {
+            top: -15px;
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="style-modular.css">
+    <link rel="stylesheet" href="css/register.css">
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="register-page">
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming">
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="games.html" class="nav__link">Games</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Community</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="register.html" class="nav__link nav__link--active nav__link--cta">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero--register">
+            <div class="hero__container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title" style="letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Join Our Community</h1>
+                    <p class="hero__description" style="max-width: 600px; font-weight: 300;">Register to unlock exclusive gaming benefits</p>
+                </div>
+                
+                <!-- Registration Form (will only display on desktop) -->
+                <div class="registration__content">
+                    <h2 style="margin-bottom: 0.75rem; text-align: center; color: #333; font-weight: 600;">Create Your Account</h2>
+                    
+                    <form id="registration-form-hero" class="form form--register">
+                        <div class="form-section">
+                            <div class="form-row form-row--names">
+                                <div class="form-group">
+                                    <label for="firstNameHero" class="form-label">First Name</label>
+                                    <input type="text" id="firstNameHero" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastNameHero" class="form-label">Last Name</label>
+                                    <input type="text" id="lastNameHero" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="usernameHero" class="form-label">Username</label>
+                                <input type="text" id="usernameHero" name="username" class="form-input" placeholder="Choose your gamer tag" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emailHero" class="form-label">Email Address</label>
+                                <input type="email" id="emailHero" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-row form-row--password">
+                                <div class="form-group">
+                                    <label for="passwordHero" class="form-label">Password</label>
+                                    <input type="password" id="passwordHero" name="password" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="termsHero" value="yes" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="secretpageunlocked.html">Terms of Service</a> and <a href="secretpageunlocked.html">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn">Create Account</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section (will only display on mobile) -->
+        <section class="registration">
+            <div class="container">
+                <div class="registration__content" style="margin-bottom: 3rem;">
+                    <h2 style="margin-bottom: 1.8rem; text-align: center;">Create Your LevelUp Account</h2>
+                    
+                    <form id="registration-form" class="form form--register">
+                        <div class="form-header" style="margin-bottom: 1.5rem;">
+                            <p>Fill out the form below to create your gaming profile</p>
+                        </div>
+                        
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3 style="color: #29acd0; margin-bottom: 1rem; font-weight: 500; border-bottom: 1px solid rgba(41, 172, 208, 0.3); padding-bottom: 8px;">Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" name="username" class="form-input" placeholder="Choose your gamer tag" required>
+                                <small class="form-help">This will be your display name in tournaments and on leaderboards</small>
+                            </div>
+                              <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" id="password" name="password" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Terms and Submit -->
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="newsletter" value="yes" checked>
+                                    <span class="checkmark"></span>
+                                    Send me updates about tournaments, events, and community news
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="terms" value="yes" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="secretpageunlocked.html" class="form-link">Terms of Service</a> and <a href="secretpageunlocked.html" class="form-link">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn">Create Account</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Stats -->
+        <section class="section community-preview">
+            <div class="container">
+                <h2>Join Our Growing Community</h2>
+                <div class="stats-preview">
+                    <div class="stat-preview" style="border-top: 3px solid #29acd0;">
+                        <div class="stat-preview__number">2,500+</div>
+                        <div class="stat-preview__label">Active Members</div>
+                    </div>
+                    <div class="stat-preview" style="border-top: 3px solid #6c5ce7;">
+                        <div class="stat-preview__number">150+</div>
+                        <div class="stat-preview__label">Tournaments Hosted</div>
+                    </div>
+                    <div class="stat-preview" style="border-top: 3px solid #00b894;">
+                        <div class="stat-preview__number">$100K+</div>
+                        <div class="stat-preview__label">Prize Money Awarded</div>
+                    </div>
+                    <div class="stat-preview" style="border-top: 3px solid #e84393;">
+                        <div class="stat-preview__number">50+</div>
+                        <div class="stat-preview__label">Countries Represented</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="section next-steps">
+            <div class="container">
+                <h2>What Happens Next?</h2>
+                <div class="steps-grid">
+                    <div class="step-item" style="border-bottom: 3px solid rgba(255, 255, 255, 0.2);">
+                        <div class="step-item__number" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);">1</div>
+                        <h3>Verify Your Email</h3>
+                        <p>Check your inbox for a verification email and click the link to activate your account.</p>
+                    </div>
+                    <div class="step-item" style="border-bottom: 3px solid rgba(255, 255, 255, 0.2);">
+                        <div class="step-item__number" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);">2</div>
+                        <h3>Complete Your Profile</h3>
+                        <p>Add your gaming preferences, avatar, and connect your social accounts.</p>
+                    </div>
+                    <div class="step-item" style="border-bottom: 3px solid rgba(255, 255, 255, 0.2);">
+                        <div class="step-item__number" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);">3</div>
+                        <h3>Join Your First Tournament</h3>
+                        <p>Browse our events page and register for a tournament that matches your skill level.</p>
+                    </div>
+                    <div class="step-item" style="border-bottom: 3px solid rgba(255, 255, 255, 0.2);">
+                        <div class="step-item__number" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2);">4</div>
+                        <h3>Connect on Discord</h3>
+                        <p>Join our Discord server to chat with the community and find teammates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <!-- Column 1: Quick Links -->
+                <div class="footer__quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="register.html">Join Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Logo and Branding -->
+                <div class="footer__branding">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming" class="footer__logo">
+                    <p class="footer__tagline">Your Arena Awaits</p>
+                    <p class="footer__copyright">&copy; 2025 LevelUp Gaming. All rights reserved.</p>
+                </div>
+                
+                <!-- Column 3: Social Media -->
+                <div class="footer__social-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer__social">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-facebook"></i></span>
+                            Facebook
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-twitch"></i></span>
+                            Twitch
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-discord"></i></span>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 4: Address -->
+                <div class="footer__address">
+                    <h3>Visit Us</h3>                    <div class="footer__address-content">
+                        <p><strong>LevelUp Gaming Arena</strong></p>                        <p>123 Pixel Street</p>
+                        <p>Suite 200</p>
+                        <p>Portland, OR 97201</p>
+                        <p>United States</p>
+                        <br>                        <table class="footer__hours-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><strong>Business Hours</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday - Friday</td>
+                                    <td>9 AM - 6 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday - Sunday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p><strong>Phone:</strong> (555) 123-GAME</p>
+                        <p><strong>Email:</strong> info@levelupgaming.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>Building the ultimate gaming community where players of all levels can connect, compete, and grow together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Initialize libraries -->
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        }
+    </script>
+</body>
+</html>

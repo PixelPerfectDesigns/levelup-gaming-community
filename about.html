@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LevelUp Gaming</title>
+    
+    <!-- Internal CSS - kept for assignment grading to show all 3 CSS methods -->
+    <style>
+        /* Internal CSS for page-specific effects - demonstrates CSS method #2 */
+        .about-page .story-card__content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        /* Project banner title with text shadow effect */
+        .project-banner h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style-modular.css">
+    <link rel="stylesheet" href="css/about.css">
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="about-page">
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming">
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link nav__link--active">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="games.html" class="nav__link">Games</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Community</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="register.html" class="nav__link nav__link--cta">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero--about">
+            <div class="hero__container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title">About LevelUp Gaming</h1>
+                    <p class="hero__description">Building the ultimate gaming community since 2020</p>
+                </div>
+            </div>
+        </section>        <!-- Story Section -->
+        <section class="section about-story">
+            <div class="container">                <h2 class="text-center">Our Story</h2>
+                <div class="story-card">
+                    <div class="story-card__image">
+                        <img src="assets/img/Levelup_team.png" alt="LevelUp Gaming Team">
+                    </div>
+                    <div class="story-card__content">
+                        <h3>Building the Ultimate Gaming Community</h3>
+                        <p>LevelUp Gaming was founded with a simple mission: to create a space where gamers of all skill levels could come together, learn, and compete in a supportive environment.</p>
+                        <p>What started as a small group of friends playing together has grown into a thriving community of thousands of passionate gamers from around the world.</p>
+                        <p>We believe that gaming is more than just entertainment – it's a way to build friendships, develop skills, and push the boundaries of what's possible.</p>
+                    </div>
+                </div>
+            </div>        </section>
+        
+        <!-- Mission Section -->
+        <section class="section mission section-bg-solid-dark">
+            <div class="container">
+                <h2 class="text-center">Our Mission</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card__icon" style="font-size: 3rem; text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);">🎮</div>
+                        <div class="card__content">
+                            <h3>Foster Community</h3>
+                            <p>Creating connections between gamers worldwide through shared passion and competition.</p>
+                        </div>
+                    </div>                    <div class="card">
+                        <div class="card__icon" style="font-size: 3rem; color: var(--color-accent-yellow);">🏆</div>
+                        <div class="card__content">
+                            <h3>Promote Excellence</h3>
+                            <p>Encouraging skill development and competitive spirit in a supportive environment.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon" style="font-size: 3rem; animation: pulse 2s infinite;">🌟</div>
+                        <div class="card__content">
+                            <h3>Celebrate Gaming</h3>
+                            <p>Recognizing gaming as a legitimate sport and art form that deserves respect and recognition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>        </section>
+          <!-- Team Section -->
+        <section class="section team section-bg-solid-light">
+            <div class="container">                <h2 class="text-center">Meet the Team</h2>
+                <p class="text-center section-subtitle" style="color: #424040; font-weight: 500; text-shadow: 0 0 1px rgba(255,255,255,0.5);">The passionate individuals who make LevelUp Gaming the best place to play</p>
+                <div class="cards-grid cards-grid--4-cards">
+                    <div class="card team-card">
+                        <div class="team-card__image">
+                            <img src="assets/img/about_meet_the_team_owner.png" alt="Uncle G">
+                        </div>
+                        <div class="card__content">
+                            <h3>Uncle G</h3>
+                            <p class="team-card__role">🎮 Founder & GM</p>
+                            <p>Visionary leader who transformed a passion for gaming into Portland's premier gaming destination.</p>
+                        </div>
+                    </div>
+                    <div class="card team-card">
+                        <div class="team-card__image">
+                            <img src="assets/img/about_meet_the_team_events.png" alt="Sam R">
+                        </div>
+                        <div class="card__content">
+                            <h3>Sam R</h3>
+                            <p class="team-card__role">🎉 Events Coordinator</p>
+                            <p>Tournament mastermind ensuring every competition runs smoothly with unforgettable experiences.</p>
+                        </div>
+                    </div>
+                    <div class="card team-card">
+                        <div class="team-card__image">
+                            <img src="assets/img/about_meet_the_team_tech.png" alt="Jamie L">
+                        </div>
+                        <div class="card__content">
+                            <h3>Jamie L</h3>
+                            <p class="team-card__role">⚙️ Tech Lead</p>
+                            <p>Tech wizard maintaining peak performance across all gaming systems and hardware.</p>
+                        </div>
+                    </div>
+                    <div class="card team-card">
+                        <div class="team-card__image">
+                            <img src="assets/img/about_meet_the_team_community.png" alt="Tara V">
+                        </div>
+                        <div class="card__content">
+                            <h3>Tara V</h3>
+                            <p class="team-card__role">💬 Community Manager</p>
+                            <p>Community heart building connections and ensuring everyone feels good at LevelUp.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Project Banner Section -->
+        <section class="section section-bg-solid-dark">
+            <div class="container">
+                <div class="project-banner text-center">
+                    <h2 class="text-center">IT 270 Final Project</h2>
+                    <p class="project-url"><a href="http://alexstaples.atwebpages.com/" target="_blank" style="color: white; text-decoration: underline; font-weight: 500; transition: all 0.3s ease;">http://alexstaples.atwebpages.com/</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Process Section -->
+        <section class="section about-development">
+            <div class="container">
+                <h2 class="text-center">Documentation of the Development Process</h2>
+                <div class="development-content">
+                    <p class="text-justified">
+                        The intent behind the LevelUp Gaming website was to create a modern, engaging, and mobile-friendly platform for a gaming community and event space. The primary goal was to showcase events, games, and community features in a way that would appeal to both casual visitors and dedicated gamers, while also serving as a professional portfolio piece.
+                    </p>
+                    <p class="text-justified">
+                        To achieve these objectives, I began by outlining the site's structure and identifying the key pages: Home, About, Games, Events, Community, Contact, and Register. I designed wireframes to plan the layout and navigation, ensuring a logical flow for users. I selected a consistent color palette and modern typography to reflect the brand's energetic and inclusive vibe. Throughout development, I prioritized mobile responsiveness, accessibility, and clean, well-organized code. I also incorporated user feedback and tested the site on multiple devices to ensure a smooth experience for all visitors.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Design Defense Section -->
+        <section class="section about-design section-bg-solid-light">
+            <div class="container">
+                <h2 class="text-center">Defense of the Final Product</h2>
+                <div class="design-content">
+                    <p class="text-justified">
+                        Each design choice was made with the end user in mind. The color scheme uses bold, vibrant colors to capture the excitement of gaming, while maintaining enough contrast for readability. Typography combines a modern sans-serif for headings (Exo 2) with a clean, readable body font (Roboto), ensuring clarity and a professional look.
+                    </p>
+                    <div class="design-features">
+                        <ul class="feature-list">
+                            <li>Home Page: Features a welcoming hero section and clear navigation, making it easy for new visitors to understand the site's purpose.</li>
+                            <li>About Page: Introduces the team and mission, using images and concise bios to build trust and community.</li>
+                            <li>Games Page: Showcases available games with engaging visuals and descriptions, helping users quickly find what interests them.</li>
+                            <li>Events Page: Highlights upcoming and past events with cards and schedules, making it easy to participate or catch up on highlights.</li>
+                            <li>Community Page: Embeds a live stream and social links, encouraging interaction and ongoing engagement.</li>
+                            <li>Contact/Register Pages: Simple forms and clear contact info make it easy for users to reach out or join.</li>
+                        </ul>
+                    </div>
+                    <p class="text-justified">
+                        Animations (AOS) were used sparingly to add polish without distracting from content. The footer is consistent across pages, providing quick access to business hours, contact info, and social media. All choices were tested for usability, ensuring the site is both engaging and easy to navigate.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Future Improvements Section -->
+        <section class="section about-improvements">
+            <div class="container">
+                <h2 class="text-center">Opportunities for Improvement and Growth</h2>
+                <div class="improvements-content">
+                    <p class="text-justified">
+                        Given more time or resources, I would expand the website's features and content. Potential improvements include:
+                    </p>
+                    <div class="improvement-features">
+                        <ul class="feature-list">
+                            <li>Adding a user login system and personalized dashboards for members.</li>
+                            <li>Integrating a real-time event calendar and registration system.</li>
+                            <li>Creating a blog or news section for updates and community stories.</li>
+                            <li>Optimizing image assets even more for faster load times.</li>
+                            <li>Including more interactive elements, like forums or chat features.</li>
+                            <li>Expanding the games and events sections with more detailed content, videos, and galleries.</li>
+                        </ul>
+                    </div>
+                    <p class="text-justified">
+                        Future updates could also involve deeper integration with social media, more advanced analytics, and support for multiple languages to reach a broader audience.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <!-- Column 1: Quick Links -->
+                <div class="footer__quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="register.html">Join Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Logo and Branding -->
+                <div class="footer__branding">
+                    <img src="assets/img/LevelUp_head_logo.png" alt="LevelUp Gaming" class="footer__logo">
+                    <p class="footer__tagline">Your Arena Awaits</p>
+                    <p class="footer__copyright">&copy; 2025 LevelUp Gaming. All rights reserved.</p>
+                </div>
+                
+                <!-- Column 3: Social Media -->
+                <div class="footer__social-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer__social">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-facebook"></i></span>
+                            Facebook
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-twitch"></i></span>
+                            Twitch
+                        </a>
+                        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                            <span class="footer__social-icon"><i class="fab fa-discord"></i></span>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 4: Address -->
+                <div class="footer__address">
+                    <h3>Visit Us</h3>                    <div class="footer__address-content">
+                        <p><strong>LevelUp Gaming Arena</strong></p>                        <p>123 Pixel Street</p>
+                        <p>Suite 200</p>
+                        <p>Portland, OR 97201</p>
+                        <p>United States</p>
+                        <br>                        <table class="footer__hours-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><strong>Business Hours</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday - Friday</td>
+                                    <td>9 AM - 6 PM PST</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday - Sunday</td>
+                                    <td>12 PM - 4 PM PST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p><strong>Phone:</strong> (555) 123-GAME</p>
+                        <p><strong>Email:</strong> info@levelupgaming.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>Building the ultimate gaming community where players of all levels can connect, compete, and grow together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Optional: AOS Animation Library (via CDN) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Initialize libraries if using them -->
+    <script>
+        // Initialize AOS animations (optional)
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+/* css/about.css - About page specific styles */
+
+/* 
+ * ABOUT CSS ORGANIZATION
+ * 1. Hero Styles
+ * 2. Section & Typography Styles
+ * 3. Card & Component Styles
+ * 4. Team Section Styles
+ * 5. Documentation & Project Sections
+ * 6. Utility Classes
+ * 7. Responsive Styles
+ */
+
+/* Team card hover effect and image styling from internal CSS */
+.about-page .team-card__image {
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.about-page .team-card:hover .team-card__image {
+    transform: scale(1.05);
+}
+
+.story-card__content h3 {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.story-card__content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Project banner specific highlight */
+.project-banner h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   1. HERO STYLES
+   ========================================================================== */
+
+.hero--about {
+    background: var(--section-bg-gradient-main);
+    position: relative;
+}
+
+.hero--about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/img/about_hero.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   2. SECTION & TYPOGRAPHY STYLES
+   ========================================================================== */
+
+/* Story Section */
+.about-story {
+    padding: 6rem 0;
+    background: white;
+    color: var(--color-text-dark);
+}
+
+.about-story h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.story-card {
+    background: var(--color-neutral);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    max-width: 800px;
+    margin: 2rem auto;
+    color: var(--color-text-dark);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.story-card__image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.story-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 5%;
+}
+
+.story-card__content {
+    padding: 2rem;
+}
+
+.story-card__content h3 {
+    color: var(--color-accent-teal);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.story-card__content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+}
+
+.story-card__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   3. CARD & COMPONENT STYLES
+   ========================================================================== */
+
+/* Universal Card Styles */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--color-neutral);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+    color: var(--color-text-dark);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card__icon {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+}
+
+.card__content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card__content h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.card__content p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+/* Make sure text in team cards is dark for better contrast */
+.team-card .card__content p {
+    color: var(--color-text-dark);
+}
+
+/* Mission Section */
+.mission {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 6rem 0;
+    color: white;
+}
+
+.mission h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mission .card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.mission .card:hover {
+    background: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Section */
+.team {
+    padding: 6rem 0;
+    background: #f8f9fa;
+}
+
+.team h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.team .section-subtitle {
+    text-align: center;
+    color: #424040 !important; 
+    margin-bottom: 3rem;
+    font-weight: 500;
+    text-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+
+/* ==========================================================================
+   4. TEAM SECTION STYLES
+   ========================================================================== */
+
+.team-card {
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.team-card__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2rem auto 1.5rem;
+    border: 4px solid var(--primary-color);
+}
+
+.team-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card__role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+}
+
+.team-card .card__content h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Project Information Sections */
+.project-banner {
+    padding: 2rem;
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.project-banner h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-url a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.project-url a:hover {
+    opacity: 0.8;
+}
+
+.about-development, .about-design, .about-improvements {
+    padding: 4rem 0;
+}
+
+.about-development {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.about-improvements {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.development-content, .design-content, .improvements-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-justified {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.feature-list {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    list-style-type: disc;
+}
+
+.feature-list li {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+.design-features, .improvement-features {
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-bg-solid-light .design-features {
+    background: #ffffff;
+}
+
+/* History, Values, and Impact Sections */
+.history-section,
+.values-section,
+.impact-section {
+    padding: 4rem 0;
+}
+
+.history-section {
+    background-color: var(--color-bg-light);
+}
+
+.values-section {
+    background-color: white;
+}
+
+.impact-section {
+    background-color: var(--color-bg-light);
+}
+
+.text-justified {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-dark);
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Improved contrast for section titles */
+.history-section h2,
+.values-section h2,
+.impact-section h2 {
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Remove bullet points from value lists */
+.values-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.values-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   6. UTILITY CLASSES
+   ========================================================================== */
+
+/* Center text */
+.text-center {
+    text-align: center;
+}
+
+/* Justified text for better reading */
+.text-justified {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Section backgrounds */
+.section-bg-solid-dark {
+    background: var(--section-bg-solid-dark);
+    color: var(--color-text-light);
+}
+
+.section-bg-solid-light {
+    background: var(--section-bg-solid-light);
+    color: var(--color-text-dark);
+}
+
+/* Section subtitle styling */
+.section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE STYLES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Hero adjustments */
+    .hero--about .hero__title {
+        font-size: 2rem;
+    }
+    
+    /* Story section */
+    .story-card__content {
+        padding: 1.5rem;
+    }
+    
+    .story-card__image {
+        height: 200px;
+    }
+    
+    /* Card grid adjustments */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .cards-grid--4-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .card__content {
+        padding: 1.5rem;
+    }
+    
+    /* Project section */
+    .project-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Typography adjustments */
+    .text-justified {
+        font-size: 1rem;
+    }
+    
+    .feature-list li {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    
+    /* Team section */
+    .team-card__image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Section spacing */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .about-development, 
+    .about-design, 
+    .about-improvements {
+        padding: 3rem 0;
+    }
+}

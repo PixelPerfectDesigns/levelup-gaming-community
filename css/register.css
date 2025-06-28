@@ -1,0 +1,451 @@
+/* ========================================
+   REGISTER PAGE STYLES - register.css
+   
+   Table of Contents:
+   1. Hero Section
+   2. Registration Form
+   3. Community Preview
+   4. Next Steps
+   5. Responsive Styles
+   ======================================== */
+
+/* ----------------------------------------
+   1. HERO SECTION
+   ---------------------------------------- */
+.hero--register {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    position: relative;
+}
+
+.hero--register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/img/register_hero.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Two-column layout for desktop */
+@media (min-width: 992px) {
+    .hero--register {
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
+    }
+    
+    .hero--register .hero__container {
+        width: 100%;
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .hero--register .hero__content {
+        text-align: left;
+        padding-right: 2rem;
+        max-width: 100%;
+    }
+    
+    .hero--register .hero__description {
+        margin-left: 0;
+    }
+    
+    /* Move registration form into hero */
+    .registration {
+        display: none;
+    }
+    
+    .hero--register .registration__content {
+        display: block;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 0 0 auto;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 10;
+        min-height: 450px; /* Ensure consistent height for thank you message */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Thank you message styling */
+    .hero--register .thank-you-message,
+    .registration .thank-you-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        min-height: 400px; /* Ensure enough height for both forms */
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        padding: 2rem;
+    }
+    
+    /* Form styling adjustments for in-hero placement */
+    .hero--register .form--register {
+        padding: 0;
+    }
+    
+    /* Two-column layout for name fields */
+    .hero--register .form-row--names {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .hero--register .form-row--password {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .hero--register .form-group {
+        margin-bottom: 0.5rem; /* Reduced spacing between form groups */
+    }
+    
+    .hero--register .form-input {
+        padding: 0.5rem 0.7rem; /* Slightly smaller padding on inputs */
+        font-size: 0.95rem;    /* Slightly smaller font size */
+    }
+    
+    .hero--register h2 {
+        font-size: 1.7rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero--register h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero--register .form-checkbox {
+        margin: 0.5rem 0; /* Reduced margins on checkboxes */
+        font-size: 0.9rem;
+    }
+    
+    .hero--register .form-checkbox a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .hero--register .form-checkbox a:hover {
+        text-decoration: underline;
+    }
+    
+    .hero--register .btn {
+        margin: 0.5rem auto 0 !important;
+        padding: 0.75rem 1.5rem; /* Smaller padding on button */
+    }
+}
+
+/* ----------------------------------------
+   2. REGISTRATION FORM
+   ---------------------------------------- */
+.registration-section {
+    padding: 6rem 0;
+}
+
+.registration-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.registration-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.benefit-item__icon {
+    font-size: 2rem;
+    min-width: 50px;
+}
+
+.benefit-item__content h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.benefit-item__content p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+/* Registration Form */
+.registration-form {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.registration-form h2 {
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-help {
+    color: var(--gray-color);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+/* Form checkbox styles */
+/* Custom checkbox styling for better UX */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
+/* Remove default checkbox margins */
+.form-checkbox input[type="checkbox"] {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Custom checkbox styling */
+.checkmark {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.form-footer p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* ----------------------------------------
+   3. COMMUNITY PREVIEW
+   ---------------------------------------- */
+.community-preview {
+    background: #f8f9fa;
+    padding: 6rem 0;
+}
+
+.stats-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Statistic cards with clean, modern design */
+.stat-preview {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+/* Subtle elevation on hover */
+.stat-preview:hover {
+    transform: translateY(-5px);
+}
+
+/* Large, bold numbers for impact */
+.stat-preview__number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Subtle, uppercase labels for clean look */
+.stat-preview__label {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ----------------------------------------
+   4. NEXT STEPS
+   ---------------------------------------- */
+.next-steps {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.next-steps h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Step cards with translucent background and blur effect */
+.step-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    backdrop-filter: blur(10px); /* Creates frosted glass effect */
+}
+
+/* Enhanced hover state */
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+/* Numbered circle icon with gradient background */
+.step-item__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.step-item h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.step-item p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+/* Show/Hide Registration Forms Based on Screen Size */
+@media (min-width: 992px) {
+    /* Show in-hero form on desktop */
+    .hero--register .registration__content {
+        display: block !important;
+    }
+    
+    /* Hide mobile form on desktop */
+    .registration {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Hide in-hero form on mobile */
+    .hero--register .registration__content {
+        display: none !important;
+    }
+    
+    /* Show mobile form on mobile */
+    .registration {
+        display: block;
+    }
+}
+
+/* ----------------------------------------
+   5. RESPONSIVE STYLES
+   ---------------------------------------- */
+@media (max-width: 768px) {
+    .registration-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .registration-form {
+        padding: 1.5rem;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Improve checkbox layout on mobile */
+    .form-checkbox {
+        align-items: flex-start;
+        line-height: 1.5;
+        margin: 1rem 0;
+    }
+    
+    .form-checkbox input[type="checkbox"] {
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+    
+    .form-checkbox .checkmark {
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+    
+    .stats-preview {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
